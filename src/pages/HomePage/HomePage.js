@@ -1,11 +1,11 @@
 import React from 'react';
 
-const HomePage = () => {
+const HomePage = ({ onNext }) => {
     return (
         <div className="homepage">
-            <h1>Welcome to the Trust Game Study</h1>
+            <h1>Welcome to My Experiment</h1>
             <p>This study explores the dynamics of trust in human interactions.</p>
-            <button>Participate in Study</button>
+            <button onClick={onNext}>Participate in Study</button>
         </div>
     );
 };
