@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
-import TutorialScreen from '../../components/TutorialScreen/TutorialScreen';
+import InstructionScreen from '../../components/InstructionScreen/InstructionScreen';
+import GameScreen from '../../components/GameScreen/GameScreen';
 
 const TrustGame = () => {
-    
+
     const [isGameStarted, setIsGameStarted] = useState(false);
+
+    const initialMoneyBalance = 25; // Define initialMoneyBalance
+    const experimentRoundCount = 10; // Define experimentRoundCount
+    const trialRoundCount = 10; // Define trialRoundCount
 
     const startGame = () => {
         setIsGameStarted(true);
@@ -12,10 +17,9 @@ const TrustGame = () => {
     return (
         <div>
             {!isGameStarted ? (
-                <TutorialScreen onStartGame={startGame} />
+                <InstructionScreen onStartGame={startGame} />
             ) : (
-                // The component or logic for the actual game goes here
-                <p>Game content will be displayed here.</p>
+                <GameScreen initialMoneyBalance experimentRoundCount trialRoundCount  />
             )}
         </div>
     );

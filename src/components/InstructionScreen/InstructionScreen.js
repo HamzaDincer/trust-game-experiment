@@ -1,9 +1,9 @@
 import React from 'react';
 
-const TutorialScreen = ({ onStartGame }) => {
+const InstructionScreen = ({ onStartGame }) => {
 
     return (
-        <div className="tutorial-screen">
+        <div className="instruction-screen">
             <h2>Instructions</h2>
             <p>Thank you all for taking the time to come today. This game may take 30 minutes. If you have heard about </p>
             <p>a game that has been played here in the past you should try to forget everything that you have been told</p>
@@ -23,4 +23,4 @@ const TutorialScreen = ({ onStartGame }) => {
     );
 };
 
-export default TutorialScreen;
+export default InstructionScreen;
