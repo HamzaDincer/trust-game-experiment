@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
+import "./WaitingScreen.scss";
 
-const WaitingScreen = ({
-  offer,
-  investmentReturnMultiplier,
-  onWaitComplete,
-}) => {
+const WaitingScreen = ({ offer, investmentReturnMultiplier, onContinue }) => {
   const [waitingDots, setWaitingDots] = useState("");
   const WAITING_SCREEN_TIME = 5; // seconds for the waiting screen, adjust as needed
 
@@ -15,11 +12,11 @@ const WaitingScreen = ({
 
     setTimeout(() => {
       clearInterval(interval);
-      onWaitComplete(); // Proceed to the next screen after the waiting time
+      onContinue(); // Proceed to the next screen after the waiting time
     }, WAITING_SCREEN_TIME * 1000);
 
     return () => clearInterval(interval);
-  }, [onWaitComplete]);
+  }, [onContinue]);
 
   const investmentWorth = offer * investmentReturnMultiplier;
 

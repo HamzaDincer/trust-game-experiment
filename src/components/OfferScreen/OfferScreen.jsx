@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
+import "./OfferScreen.scss";
 
-const OfferScreen = ({ moneyBalance, onOfferComplete }) => {
+const OfferScreen = ({ moneyBalance, onOfferComplete, isTrial }) => {
   const OFFER_START_AT = 10; // Starting offer amount
   const MONEY_INCREMENT = 5; // Increment amount for each offer change
   const [offer, setOffer] = useState(OFFER_START_AT);

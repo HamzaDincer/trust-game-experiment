@@ -1,6 +1,7 @@
 import React from "react";
+import "./TutorialScreen.scss";
 
-const TutorialScreen = ({ onComplete }) => {
+const TutorialScreen = ({ onTrialStart }) => {
   return (
     <div className="tutorial-screen">
       <h1>How to Play</h1>
@@ -23,7 +24,7 @@ const TutorialScreen = ({ onComplete }) => {
         </li>
       </ol>
       <p>Let's start with some practice rounds to get you familiarized.</p>
-      <button onClick={onComplete}>Start Practice Rounds</button>
+      <button onClick={onTrialStart}>Start Practice Rounds</button>
     </div>
   );
 };
