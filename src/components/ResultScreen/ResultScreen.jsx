@@ -1,4 +1,5 @@
 import React from "react";
+import "./ResultScreen.scss";
 
 const ResultScreen = ({
   investorResponse,
@@ -17,7 +18,9 @@ const ResultScreen = ({
       <p>You gained ${investmentReturn.toFixed(2)} from this investment.</p>
       <p>Before the investment: ${moneyBalance.toFixed(2)}</p>
       <p>After the investment: ${finalBalance.toFixed(2)}</p>
-      <button onClick={onNextRound}>Proceed to Next Round</button>
+      <button onClick={() => onNextRound(finalBalance)}>
+        Proceed to Next Round
+      </button>
     </div>
   );
 };

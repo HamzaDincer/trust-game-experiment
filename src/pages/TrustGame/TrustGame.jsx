@@ -22,15 +22,16 @@ const TrustGame = () => {
   };
 
   // Function to handle end of each round
-  const handleRoundComplete = (offer) => {
+  const handleRoundComplete = (moneyBalance) => {
     if (isTrial && round < trialRoundCount) {
       // Update money balance for next round
-      setCurrentOffer(offer);
-      setMoneyBalance(moneyBalance - offer);
+      setMoneyBalance(moneyBalance);
       setRound(round + 1);
       setStage("offer");
     } else if (isTrial && round >= trialRoundCount) {
       setIsTrial(false);
+      setRound(1);
+      setMoneyBalance(25);
       setStage("begin");
     } else if (!isTrial && round >= experimentRoundCount) {
       // Handle game end
@@ -87,7 +88,7 @@ const TrustGame = () => {
           offer={currentOffer}
           investmentReturnMultiplier={investmentReturnMultiplier}
           moneyBalance={moneyBalance}
-          onNextRound={() => handleRoundComplete(currentOffer)}
+          onNextRound={handleRoundComplete}
         />
       );
     default:

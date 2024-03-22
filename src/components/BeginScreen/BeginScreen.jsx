@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import "./BeginScreen.scss";
 
 const BeginScreen = ({ onGameStart }) => {
   useEffect(() => {
