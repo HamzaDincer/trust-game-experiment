@@ -13,7 +13,7 @@ const TrustGame = () => {
   const [currentOffer, setCurrentOffer] = useState(0);
   const [moneyBalance, setMoneyBalance] = useState(25);
   const trialRoundCount = 3; // Adjust for actual trial rounds
-  const experimentRoundCount = 10;
+  const experimentRoundCount = 1;
   const investmentReturnMultiplier = 2; // Multiplier for investment return
   const investorResponse = 80; // Fixed investor response
 
