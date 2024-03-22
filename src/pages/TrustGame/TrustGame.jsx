@@ -6,6 +6,7 @@ import WaitingScreen from "../../components/WaitingScreen/WaitingScreen";
 import ResultScreen from "../../components/ResultScreen/ResultScreen";
 
 const TrustGame = () => {
+  // State to manage game stage
   const [stage, setStage] = useState("tutorial");
   const [round, setRound] = useState(1);
   const [isTrial, setIsTrial] = useState(true);
