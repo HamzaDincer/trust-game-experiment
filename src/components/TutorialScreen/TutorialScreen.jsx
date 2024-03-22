@@ -17,7 +17,7 @@ const TutorialScreen = ({ onTrialStart }) => {
         <li>You'll start with a certain amount of money to invest.</li>
         <li>
           You will decide how much to invest each round. Your investment will be
-          doubled and shared between you and investor by the investor .
+          multiplied and shared between you and investor by the investor .
         </li>
         <li>
           Learn to trust/distrust your investor and make strategic decisions to
