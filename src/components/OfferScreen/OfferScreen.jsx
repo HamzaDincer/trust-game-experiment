@@ -2,11 +2,8 @@ import React, { useState } from "react";
 import "./OfferScreen.scss";
 
 const OfferScreen = ({ moneyBalance, onOfferComplete, isTrial }) => {
-  const OFFER_START_AT = 10; // Starting offer amount
-  const [offer, setOffer] = useState(OFFER_START_AT);
-  const MAX_OFFER = moneyBalance; // Assuming the max offer can be all the money balance
+  const [offer, setOffer] = useState(moneyBalance / 2); // Starting offer amount
 
-  // Update the offer based on the slider
   const handleSliderChange = (event) => {
     setOffer(Number(event.target.value));
   };
@@ -15,17 +12,18 @@ const OfferScreen = ({ moneyBalance, onOfferComplete, isTrial }) => {
     <div className="offer-screen">
       <h2>Decide How Much You Will Invest Now!</h2>
       <p>You have ${moneyBalance} in your balance</p>
-      <div>
+      <div className="slider-container">
+        {isTrial && <div className="tooltip">Slide to make your offer!</div>}
         <input
           type="range"
-          min={0}
-          max={MAX_OFFER}
+          min="0"
+          max={moneyBalance}
           value={offer}
           onChange={handleSliderChange}
           className="slider"
         />
-        <p>Make Your Offer: ${offer}</p>
       </div>
+      <p>Make Your Offer: ${offer}</p>
       <button onClick={() => onOfferComplete(offer)}>Confirm Offer</button>
     </div>
   );
