@@ -26,17 +26,18 @@
   }
 
   button {
-    padding: 10px 15px;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #007bff; // Blue background for the button
+    width: 15rem;
+    margin-top: 20px;
+    padding: 10px 10px;
+    font-size: 1.2rem;
+    background-color: #28a745; // Green background
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
 
     &:hover {
-      background-color: #0056b3; // Darken the button on hover for feedback
+      background-color: darken(#28a745, 10%);
     }
   }
 }

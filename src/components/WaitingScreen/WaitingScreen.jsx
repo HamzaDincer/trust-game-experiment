@@ -3,7 +3,7 @@ import "./WaitingScreen.scss";
 
 const WaitingScreen = ({ offer, investmentReturnMultiplier, onContinue }) => {
   const [waitingDots, setWaitingDots] = useState("");
-  const WAITING_SCREEN_TIME = 5; // seconds for the waiting screen, adjust as needed
+  const WAITING_SCREEN_TIME = 5;
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -13,7 +13,7 @@ const WaitingScreen = ({ offer, investmentReturnMultiplier, onContinue }) => {
     setTimeout(() => {
       clearInterval(interval);
       onContinue(); // Proceed to the next screen after the waiting time
-    }, WAITING_SCREEN_TIME * 1000);
+    }, WAITING_SCREEN_TIME * 100);
 
     return () => clearInterval(interval);
   }, [onContinue]);
@@ -22,13 +22,10 @@ const WaitingScreen = ({ offer, investmentReturnMultiplier, onContinue }) => {
 
   return (
     <div className="waiting-screen">
-      <p>You put ${offer} into this investment.</p>
-      <p>
-        The investor multiplies your investment by {investmentReturnMultiplier}
-        x.
-      </p>
-      <p>Now, your investment is worth ${investmentWorth}.</p>
-      <p>Waiting for the decision of the investor{waitingDots}</p>
+      <p>Yatırım için {offer}TL koydunuz.</p>
+      <p>Vekiliniz yatırımınızı {investmentReturnMultiplier} katına çıkardı.</p>
+      <p>Artık yatırımınız {investmentWorth}TL değerinde.</p>
+      <p>Yatırımcının kararını bekliyoruz{waitingDots}</p>
     </div>
   );
 };

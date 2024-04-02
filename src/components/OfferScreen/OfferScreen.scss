@@ -4,22 +4,23 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding: 20px;
+  gap: 30px;
 
   h2 {
-    margin-bottom: 30px;
+    font-size: 2rem;
     color: #007bff; // Bright blue for headings
   }
 
   p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin: 5px 0;
+    text-align: center;
   }
 
   .slider-container {
     position: relative;
     width: 100%;
-    max-width: 400px; // Adjust as needed
+    max-width: 550px; // Adjust as needed
 
     .tooltip {
       position: absolute;
@@ -52,7 +53,7 @@
       width: 100%;
       height: 8px;
       border-radius: 5px;
-      background: #ddd;
+      background: #a7a3a3;
       outline: none;
       opacity: 0.7;
       -webkit-transition: 0.2s;
@@ -79,9 +80,10 @@
   }
 
   button {
+    width: 15rem;
     margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: 10px 10px;
+    font-size: 1.2rem;
     background-color: #28a745; // Green background
     color: white;
     border: none;
@@ -90,6 +92,40 @@
 
     &:hover {
       background-color: darken(#28a745, 10%);
+    }
+  }
+  .offer-container {
+    display: flex;
+    justify-content: center; // Ensures the offer (and the container itself) is centered
+    position: relative;
+
+    .offer {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .offer-tooltip {
+      position: absolute;
+      left: 100%; // Positions the tooltip to the right of the offer
+      top: 50%;
+      transform: translateX(10px) translateY(-50%); // Adjusts tooltip position relative to the offer
+      background-color: #333;
+      color: white;
+      padding: 8px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      white-space: nowrap; // Keeps the tooltip text on one line
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -10px; // Adjust to align the arrow correctly with the left edge of the tooltip
+        transform: translateY(-50%);
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent #333 transparent transparent; // Arrow pointing to the right
+      }
     }
   }
 }
