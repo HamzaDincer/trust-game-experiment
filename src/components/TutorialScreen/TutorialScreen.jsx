@@ -4,28 +4,29 @@ import "./TutorialScreen.scss";
 const TutorialScreen = ({ onTrialStart }) => {
   return (
     <div className="tutorial-screen">
-      <h1>How to Play</h1>
+      <h1>Nasıl Oynanır?</h1>
       <p>
-        Welcome to the Trust Game! This tutorial will guide you through the
-        game's basics.
+        Güven Oyununa Hoş Geldiniz! Bu sayfa, oyunun temelleri konusunda sizi
+        yönlendirecek.
       </p>
       <ol>
         <li>
-          Each game is played in several rounds between a Trustee and an
-          Investor.
+          Güven Oyunu, bir Vekil ve bir Yatırımcı arasında birkaç turda oynanır.
         </li>
-        <li>You'll start with a certain amount of money to invest.</li>
+        <li>Bu oyunumuzda her turda Yatırımcı olacaksınız.</li>
+        <li>Belli bir miktar para ile yatırım yapmaya başlayacaksınız.</li>
         <li>
-          You will decide how much to invest each round. Your investment will be
-          multiplied and shared between you and investor by the investor .
+          Her turda ne kadar yatırım yapacağınıza siz karar vereceksiniz.
+          Yatırımınız Vekil ve yatırımcı tarafından sizinle ve yatırımcı
+          arasında paylaşılacak.
         </li>
         <li>
-          Learn to trust/distrust your investor and make strategic decisions to
-          maximize returns.
+          Vekilinize güvenmeyi/güvenmemeyi öğrenin ve getirileri en üst düzeye
+          çıkarmak için stratejik kararlar alın.
         </li>
       </ol>
-      <p>Let's start with some practice rounds to get you familiarized.</p>
-      <button onClick={onTrialStart}>Start Practice Rounds</button>
+      <p>Hazır olmanız için birkaç pratik tur ile başlayalım.</p>
+      <button onClick={onTrialStart}>Deneme Turlarına Başla</button>
     </div>
   );
 };

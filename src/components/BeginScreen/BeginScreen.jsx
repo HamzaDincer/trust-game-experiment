@@ -19,10 +19,10 @@ const BeginScreen = ({ onGameStart }) => {
 
   return (
     <div className="begin-screen">
-      <h1>Tutorial Complete</h1>
+      <h1>Deneme Bitti</h1>
       <p>
-        The tutorial has ended. The real game will start soon. Press the space
-        bar to begin.
+        Deneme turları sona erdi. Gerçek oyun başlayacak. Başlamak için boşluk
+        tuşuna basın.
       </p>
     </div>
   );
