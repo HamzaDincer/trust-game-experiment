@@ -1,22 +1,23 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate instead of useHistory
-import './HomePage.scss';
+import React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate instead of useHistory
+import "./HomePage.scss";
 
 const HomePage = () => {
-    
-    const navigate = useNavigate(); // Use useNavigate hook
+  const navigate = useNavigate(); // Use useNavigate hook
 
-    const handleButtonClick = () => {
-        navigate('/consent'); // Use navigate to change the route
-    };
+  const handleButtonClick = () => {
+    navigate("/consent"); // Use navigate to change the route
+  };
 
-    return (
-        <div className="homepage">
-            <h1>Welcome to My Experiment</h1>
-            <p>This study explores the dynamics of trust in human interactions.</p>
-            <button onClick={handleButtonClick}>Participate in Study</button>
-        </div>
-    );
+  return (
+    <div className="homepage">
+      <h1>Deneyime Hoşgeldiniz!</h1>
+      <p>
+        Bu çalışma, insan etkileşimlerinde güven dinamiklerini araştırmaktadır.
+      </p>
+      <button onClick={handleButtonClick}>Deneye Katıl</button>
+    </div>
+  );
 };
 
 export default HomePage;

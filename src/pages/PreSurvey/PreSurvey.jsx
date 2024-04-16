@@ -31,7 +31,7 @@ const PreSurvey = ({ participantNumber }) => {
       <h1>Demografik Anket</h1>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Name: </label>
+          <label>İsim: </label>
           <input
             type="text"
             name="name"
@@ -51,7 +51,7 @@ const PreSurvey = ({ participantNumber }) => {
           />
         </div>
         <div>
-          <label>Age: </label>
+          <label>Yaş: </label>
           <input
             type="number"
             name="age"
@@ -61,58 +61,56 @@ const PreSurvey = ({ participantNumber }) => {
           />
         </div>
         <div className="form-gender">
-          <label>Gender: </label>
+          <label>Cinsiyet: </label>
           <label>
             <input
               type="radio"
               name="gender"
-              value="Male"
-              checked={formData.gender === "Male"}
+              value="Erkek"
+              checked={formData.gender === "Erkek"}
               onChange={handleChange}
             />{" "}
-            Male
+            Erkek
           </label>
           <label>
             <input
               type="radio"
               name="gender"
-              value="Female"
-              checked={formData.gender === "Female"}
+              value="Kadın"
+              checked={formData.gender === "Kadın"}
               onChange={handleChange}
             />{" "}
-            Female
+            Kadın
           </label>
           <label>
             <input
               type="radio"
               name="gender"
-              value="Other"
-              checked={formData.gender === "Other"}
+              value="Diğer"
+              checked={formData.gender === "Diğer"}
               onChange={handleChange}
             />{" "}
-            Other
+            Diğer
           </label>
         </div>
         <div>
-          <label>Education Level: </label>
+          <label>Eğitim Seviyesi: </label>
           <select
             name="education"
             value={formData.education}
             onChange={handleChange}
             required
           >
-            <option value="">Select...</option>
-            <option value="High School">High School</option>
-            <option value="Bachelor's Degree">Bachelor's Degree</option>
-            <option value="Master's Degree">Master's Degree</option>
-            <option value="PhD or Higher">PhD or Higher</option>
-            <option value="Other">Other</option>
+            <option value="">Seçiniz...</option>
+            <option value="High School">Lise Mezunu</option>
+            <option value="Bachelor's Degree">Üniversite Mezunu</option>
+            <option value="Master's Degree">Yüksek Lisans Mezunu</option>
+            <option value="PhD or Higher">Doktora Mezunu</option>
+            <option value="Other">Diğer</option>
           </select>
         </div>
-        <div>
-          Your Participant Number: {participantNumber || "Not Assigned"}
-        </div>
-        <button type="submit">Submit</button>
+        <div>Katılımcı Numaranız: {participantNumber || "Not Assigned"}</div>
+        <button type="submit">Gönder</button>
       </form>
     </div>
   );

@@ -5,25 +5,31 @@
   justify-content: center;
   min-height: 100vh;
   padding: 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+  color: #333;
+  font-family: "Arial", sans-serif;
 
   p {
-    margin: 10px 0;
-    font-size: 1.5rem; // Slightly larger font for readability
-    color: #333; // Dark grey for contrast
+    font-size: 1.5em;
+    margin-bottom: 2em;
+    max-width: 700px;
+    text-align: center;
+    line-height: 1.4;
   }
 
   button {
     padding: 10px 20px;
-    font-size: 1.2rem;
-    margin-top: 20px;
-    background-color: #007bff; // Consistent button color for action
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #007bff;
     border: none;
     border-radius: 5px;
-    color: white;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: darken(#007bff, 10%); // Slightly darker on hover
+      background-color: #0056b3;
     }
   }
 }

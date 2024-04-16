@@ -13,7 +13,7 @@ const WaitingScreen = ({ offer, investmentReturnMultiplier, onContinue }) => {
     setTimeout(() => {
       clearInterval(interval);
       onContinue(); // Proceed to the next screen after the waiting time
-    }, WAITING_SCREEN_TIME * 100);
+    }, WAITING_SCREEN_TIME * 1000);
 
     return () => clearInterval(interval);
   }, [onContinue]);

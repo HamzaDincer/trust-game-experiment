@@ -1,55 +1,66 @@
 .pre-survey {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+
+  form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 20px;
+    gap: 20px; /* Increased gap */
+    width: 100%;
+    max-width: 600px; /* Adjust as needed */
+  }
 
-    form {
-        display: flex;
-        flex-direction: column;
-        gap: 20px; /* Increased gap */
-        width: 100%;
-        max-width: 500px; /* Adjust as needed */
-    }
+  label {
+    font-size: 1.1rem; /* Bigger font size */
+    display: block; /* Makes label take up the full width, pushing the input/select below */
+    margin-bottom: 15px; /* Adds space between the label and the input/select field */
+  }
 
-    label {
-        font-size: 1.1rem; /* Bigger font size */
-        display: block; /* Makes label take up the full width, pushing the input/select below */
-        margin-bottom: 5px; /* Adds space between the label and the input/select field */
-        
-    }
+  input {
+    border: solid 1px #0f0f0f;
+    border-radius: 5px;
+    max-width: 570px;
+  }
 
-    input, select {
-        width: 100%; /* Makes input fields take up the full width of the form */
-        margin-bottom: 10px; /* Adds some space below each input/select field */
-    }
+  select {
+    border: solid 1px #007bff;
+  }
 
-    input, select, button {
-        padding: 15px; /* Bigger padding */
-        font-size: 1rem; /* Bigger font size */
-    }
+  input,
+  select {
+    width: 100%; /* Makes input fields take up the full width of the form */
+    margin-bottom: 10px; /* Adds some space below each input/select field */
+  }
 
-    button {
-        background-color: #007bff; /* Button color */
-        color: white; /* Text color */
-        border: none;
-        border-radius: 5px; /* Rounded corners */
-        margin-top: 25px; /* Adjusted margin */
-        cursor: pointer;
-        transition: background-color 0.3s ease; /* Smooth transition */
-    }
+  input,
+  select,
+  button {
+    padding: 15px; /* Bigger padding */
+    font-size: 1rem; /* Bigger font size */
+  }
 
-    button:hover {
-        background-color: #0056b3; /* Darker shade on hover */
-    }
+  button {
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 25px; /* Adjusted margin */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
 
+  button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
 }
 
 .form-gender {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
 }

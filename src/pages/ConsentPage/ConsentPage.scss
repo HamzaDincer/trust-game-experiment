@@ -6,50 +6,53 @@
   min-height: 100vh;
   background-color: #f8f8f8;
   color: #333;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   padding: 10px;
 
   h1 {
-      font-size: 2.2em;
-      margin-bottom: 1em;
-      color: #2e2e2e;
+    font-size: 2.2em;
+    margin-bottom: 1em;
+    color: #2e2e2e;
   }
 
   p {
-      font-size: 1.1em;
-      margin-bottom: 2em;
-      max-width: 60em;
-      text-align: justify;
-      line-height: 1.5;
+    font-size: 1.1em;
+    margin-bottom: 0.1em;
+    max-width: 60em;
+    text-align: justify;
+    line-height: 1.5;
   }
 
   button {
-      padding: 12px 25px;
-      width: 200px;
-      font-size: 1.1em;
-      font-weight: bold;
-      color: #fff;
-      background-color: #4caf50;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      margin: 10px; // Added to give some space between buttons
+    padding: 12px 25px;
+    width: 200px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px; // Added to give some space between buttons
 
-      &:hover {
-          background-color: darken($color: #4caf50, $amount: 20%);
-      }
+    &:hover {
+      background-color: darken($color: #4caf50, $amount: 20%);
+    }
 
-      &:focus {
-          outline: none;
-      }
+    &:focus {
+      outline: none;
+    }
   }
 
   .decline-button {
-      background-color: #f44336; // Red for decline button
+    background-color: #f44336; // Red for decline button
 
-      &:hover {
-          background-color: darken($color: #f44336, $amount: 20%); // Darker shade on hover
-      }
+    &:hover {
+      background-color: darken(
+        $color: #f44336,
+        $amount: 20%
+      ); // Darker shade on hover
+    }
   }
 }
