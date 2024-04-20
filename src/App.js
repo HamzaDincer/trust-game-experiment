@@ -10,7 +10,6 @@ import HomePage from "./pages/HomePage/HomePage";
 const Experiment = () => {
   const [participantNumber, setParticipantNumber] = useState(1);
 
-  // This function is now used to assign the participant number from the consent form
   const assignParticipantNumber = (number) => {
     setParticipantNumber(number);
   };

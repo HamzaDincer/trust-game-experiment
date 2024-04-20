@@ -7,12 +7,12 @@
   gap: 30px;
 
   h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     color: #007bff; // Bright blue for headings
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 2rem;
     margin: 5px 0;
     text-align: center;
   }
@@ -32,7 +32,7 @@
       color: white;
       padding: 8px 12px;
       border-radius: 5px;
-      font-size: 0.9rem;
+      font-size: 1rem;
       white-space: nowrap;
       display: block;
 
@@ -80,10 +80,10 @@
   }
 
   button {
-    width: 15rem;
+    width: 20rem;
     margin-top: 20px;
     padding: 10px 10px;
-    font-size: 1.2rem;
+    font-size: 2rem;
     background-color: #28a745; // Green background
     color: white;
     border: none;
@@ -101,7 +101,7 @@
 
     .offer {
       font-weight: bold;
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
 
     .offer-tooltip {

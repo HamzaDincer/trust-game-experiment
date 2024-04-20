@@ -11,7 +11,6 @@ const BeginScreen = ({ onGameStart }) => {
 
     window.addEventListener("keydown", handleKeyPress);
 
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener("keydown", handleKeyPress);
     };
