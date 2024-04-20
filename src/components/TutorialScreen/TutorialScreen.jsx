@@ -17,11 +17,15 @@ const TutorialScreen = ({ onTrialStart }) => {
         <li>Belli bir miktar para ile yatırım yapmaya başlayacaksınız.</li>
         <li>
           Her turda ne kadar yatırım yapacağınıza siz karar vereceksiniz.
-          Yatırımınız iki katlanıp vekiliniz tar paylaşılacak.
+          Yatırımınız ikiye katlanıp vekiliniz tarafından aranızda paylaşılacak.
         </li>
         <li>
-          Vekilinize güvenmeyi/güvenmemeyi öğrenin ve getirileri en üst düzeye
-          çıkarmak için stratejik kararlar alın.
+          Yapacağınız yatırım kararları vekilinizin kararlarını etkileyecek.
+        </li>
+        <li>
+          Bu oyunda vekilinize güvenmeye/güvenmemeye karar vereceksiniz ve
+          kazancınızı en üst düzeye çıkarmak için stratejik kararlar almanız
+          gerecek.
         </li>
       </ol>
       <p>Hazır olmanız için birkaç pratik tur ile başlayalım.</p>

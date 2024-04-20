@@ -15,7 +15,7 @@ const TrustGame = () => {
   const trialRoundCount = 3; // Adjust for actual trial rounds
   const experimentRoundCount = 1; // Adjust for actual experiment rounds
   const investmentReturnMultiplier = 2; // Multiplier for investment return
-  const investorResponse = 80; // Fixed investor response
+  const investorResponse = 50; // Fixed investor response
 
   // Function to handle start of practice rounds
   const handleStartPractice = () => {
