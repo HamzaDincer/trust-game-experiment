@@ -4,8 +4,9 @@ import "./PreSurvey.scss";
 
 const PreSurvey = ({ participantNumber }) => {
   const [formData, setFormData] = useState({
-    name: "", // Add name
-    email: "", // Add email
+    participant_no: participantNumber,
+    name: "",
+    email: "",
     age: "",
     gender: "",
     education: "",
@@ -21,9 +22,26 @@ const PreSurvey = ({ participantNumber }) => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    navigate("/TrustGame"); // Update this to your actual next stage route
+
+    try {
+      const response = await fetch("/api/presurvey", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit participant data");
+      }
+      navigate("/TrustGame");
+    } catch (error) {
+      console.error("Error submitting participant data:", error);
+      alert("There was an error submitting your data. Please try again later.");
+    }
   };
 
   return (
@@ -66,7 +84,7 @@ const PreSurvey = ({ participantNumber }) => {
             <input
               type="radio"
               name="gender"
-              value="Erkek"
+              value="Man"
               checked={formData.gender === "Erkek"}
               onChange={handleChange}
             />{" "}
@@ -76,7 +94,7 @@ const PreSurvey = ({ participantNumber }) => {
             <input
               type="radio"
               name="gender"
-              value="Kadın"
+              value="Women"
               checked={formData.gender === "Kadın"}
               onChange={handleChange}
             />{" "}
@@ -86,7 +104,7 @@ const PreSurvey = ({ participantNumber }) => {
             <input
               type="radio"
               name="gender"
-              value="Diğer"
+              value="Other"
               checked={formData.gender === "Diğer"}
               onChange={handleChange}
             />{" "}
