@@ -13,8 +13,9 @@ const OfferScreen = ({ moneyBalance, onOfferComplete, isTrial }) => {
       <h2>Ne kadar yatırım yapacaksın?</h2>
       <p>
         Hesabında <b>{moneyBalance}TL</b> var.
-        <p>Bu turda Vekilinize ne kadar para göndermek istersiniz?</p>
       </p>
+      <p>Bu turda Vekilinize ne kadar para göndermek istersiniz?</p>
+
       <div className="slider-container">
         {isTrial && (
           <div className="tooltip">Yatırımınızı yapmak için kaydırın!</div>

@@ -5,15 +5,15 @@ import OfferScreen from "../../components/OfferScreen/OfferScreen";
 import WaitingScreen from "../../components/WaitingScreen/WaitingScreen";
 import ResultScreen from "../../components/ResultScreen/ResultScreen";
 
-const TrustGame = () => {
+const TrustGame = ({ participantNumber }) => {
   // State to manage game stage
   const [stage, setStage] = useState("tutorial");
   const [round, setRound] = useState(1);
   const [isTrial, setIsTrial] = useState(true);
   const [currentOffer, setCurrentOffer] = useState(0);
   const [moneyBalance, setMoneyBalance] = useState(500);
-  const trialRoundCount = 3; // Adjust for actual trial rounds
-  const experimentRoundCount = 1; // Adjust for actual experiment rounds
+  const trialRoundCount = 1; // Adjust for actual trial rounds
+  const experimentRoundCount = 5; // Adjust for actual experiment rounds
   const investmentReturnMultiplier = 2; // Multiplier for investment return
   const investorResponse = 50; // Fixed investor response
 
@@ -22,7 +22,6 @@ const TrustGame = () => {
     setStage("offer"); // Move to trial rounds after tutorial
   };
 
-  // Function to handle end of each round
   const handleRoundComplete = (moneyBalance) => {
     if (isTrial && round < trialRoundCount) {
       // Update money balance for next round
@@ -35,10 +34,36 @@ const TrustGame = () => {
       setMoneyBalance(25);
       setStage("begin");
     } else if (!isTrial && round >= experimentRoundCount) {
-      // Handle game end
+      // Handle game end (existing logic)
     } else {
       setRound(round + 1);
       setStage("offer");
+
+      // **Move data storage logic inside the if block**
+      if (!isTrial) {
+        console.log(participantNumber);
+        const roundData = {
+          participant_no: participantNumber,
+          round_number: round,
+          initial_amount: moneyBalance, // Assuming initial amount is always 25 in your case
+          sent_amount: currentOffer,
+          decision_time: 0 /* Add logic to capture decision time in milliseconds */,
+          return_amount: 0 /* Logic to calculate return amount based on investmentReturnMultiplier and investorResponse */,
+        };
+
+        fetch("/api/round", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(roundData),
+        })
+          .then((response) => {
+            // Handle successful data storage (optional)
+          })
+          .catch((error) => {
+            console.error("Error sending data to backend:", error);
+            // Handle data sending error (optional)
+          });
+      }
     }
   };
 

@@ -25,7 +25,7 @@ const WaitingScreen = ({ offer, investmentReturnMultiplier, onContinue }) => {
       timers.forEach((timer) => clearTimeout(timer));
       clearInterval(dotInterval); // Clear interval on unmount
     };
-  });
+  }, [onContinue]);
 
   const investmentWorth = offer * investmentReturnMultiplier;
 

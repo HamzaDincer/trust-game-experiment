@@ -8,7 +8,7 @@ import TrustGame from "./pages/TrustGame/TrustGame";
 import HomePage from "./pages/HomePage/HomePage";
 
 const Experiment = () => {
-  const [participantNumber, setParticipantNumber] = useState();
+  const [participantNumber, setParticipantNumber] = useState(1);
 
   const assignParticipantNumber = (number) => {
     setParticipantNumber(number);
@@ -38,7 +38,7 @@ const Experiment = () => {
           path="/trustgame"
           element={
             participantNumber ? (
-              <TrustGame />
+              <TrustGame participantNumber={participantNumber} />
             ) : (
               <Navigate replace to="/consent" />
             )

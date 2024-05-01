@@ -85,7 +85,7 @@ const PreSurvey = ({ participantNumber }) => {
               type="radio"
               name="gender"
               value="Man"
-              checked={formData.gender === "Erkek"}
+              checked={formData.gender === "Man"}
               onChange={handleChange}
             />{" "}
             Erkek
@@ -95,7 +95,7 @@ const PreSurvey = ({ participantNumber }) => {
               type="radio"
               name="gender"
               value="Women"
-              checked={formData.gender === "Kadın"}
+              checked={formData.gender === "Women"}
               onChange={handleChange}
             />{" "}
             Kadın
@@ -104,7 +104,7 @@ const PreSurvey = ({ participantNumber }) => {
             <input
               type="radio"
               name="gender"
-              value="Other"
+              value="Diğer"
               checked={formData.gender === "Diğer"}
               onChange={handleChange}
             />{" "}
@@ -127,7 +127,7 @@ const PreSurvey = ({ participantNumber }) => {
             <option value="Other">Diğer</option>
           </select>
         </div>
-        <div>Katılımcı Numaranız: {participantNumber || "Not Assigned"}</div>
+        <div>Katılımcı Numaranız: {participantNumber || null}</div>
         <button type="submit">Gönder</button>
       </form>
     </div>
