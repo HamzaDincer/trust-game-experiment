@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ConsentForm from "./pages/ConsentPage/ConsentPage";
 import PreSurvey from "./pages/PreSurvey/PreSurvey";
 import TrustGame from "./pages/TrustGame/TrustGame";
-import ThankYouPage from "./ThankYouPage";
+import ThankYouPage from "./pages/ThankYou/ThankYou";
 import HomePage from "./pages/HomePage/HomePage";
 
 const Experiment = () => {
@@ -43,7 +43,7 @@ const Experiment = () => {
             )
           }
         />
-        <Route path="/thankYou" element={<ThankYouPage />} />
+        <Route path="/thankyou" element={<ThankYouPage />} />
       </Routes>
     </BrowserRouter>
   );

@@ -3,10 +3,10 @@ import "./ThankYou.scss";
 
 const ThankYou = () => {
   return (
-    <div className="thank-you-container">
-      <h1>Thank You for Participating!</h1>
-      <p>Your contribution to this experiment is valuable.</p>
-      <p>We appreciate your time and effort.</p>
+    <div className="thank-you">
+      <h1>Deneyimize Katıldığınız İçin Teşekkür Ederiz!</h1>
+      <p>Deneye katkılarınız bizim için çok değerli.</p>
+      <p>Zamanınız ve emeğiniz için teşekkür ederiz.</p>
     </div>
   );
 };
