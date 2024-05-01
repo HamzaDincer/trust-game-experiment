@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import BeginScreen from "../../components/BeginScreen/BeginScreen";
 import TutorialScreen from "../../components/TutorialScreen/TutorialScreen";
 import OfferScreen from "../../components/OfferScreen/OfferScreen";
@@ -6,7 +7,6 @@ import WaitingScreen from "../../components/WaitingScreen/WaitingScreen";
 import ResultScreen from "../../components/ResultScreen/ResultScreen";
 
 const TrustGame = ({ participantNumber }) => {
-  // State to manage game stage
   const [stage, setStage] = useState("tutorial");
   const [round, setRound] = useState(1);
   const [isTrial, setIsTrial] = useState(true);
@@ -16,6 +16,8 @@ const TrustGame = ({ participantNumber }) => {
   const experimentRoundCount = 5; // Adjust for actual experiment rounds
   const investmentReturnMultiplier = 2; // Multiplier for investment return
   const investorResponse = 50; // Fixed investor response
+
+  const navigate = useNavigate();
 
   // Function to handle start of practice rounds
   const handleStartPractice = () => {
@@ -33,8 +35,8 @@ const TrustGame = ({ participantNumber }) => {
       setRound(1);
       setMoneyBalance(25);
       setStage("begin");
-    } else if (!isTrial && round >= experimentRoundCount) {
-      // Handle game end (existing logic)
+    } else if (!isTrial && round > experimentRoundCount) {
+      navigate("/ThankYou");
     } else {
       setRound(round + 1);
       setStage("offer");

@@ -3,8 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ConsentForm from "./pages/ConsentPage/ConsentPage";
 import PreSurvey from "./pages/PreSurvey/PreSurvey";
 import TrustGame from "./pages/TrustGame/TrustGame";
-// import PostSurvey from './PostSurvey';
-// import ThankYouPage from './ThankYouPage';
+import ThankYouPage from "./ThankYouPage";
 import HomePage from "./pages/HomePage/HomePage";
 
 const Experiment = () => {
@@ -44,9 +43,7 @@ const Experiment = () => {
             )
           }
         />
-        {/* <Route path="/postSurvey" element={participantNumber ? <PostSurvey /> : <Navigate replace to="/consent" />} />
-                <Route path="/thankYou" element={<ThankYouPage />} />
-                */}
+        <Route path="/thankYou" element={<ThankYouPage />} />
       </Routes>
     </BrowserRouter>
   );

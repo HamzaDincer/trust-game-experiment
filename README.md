@@ -1,6 +1,6 @@
 # Trust Game Study
 
-An interactive web application developed in React to study trust reciprocity using machine learning algorithms.
+An interactive web application developed in React to study trust reciprocity.
 
 ## Introduction
 
@@ -23,3 +23,4 @@ cd trust-game-experiment
 npm install
 
 
+```
