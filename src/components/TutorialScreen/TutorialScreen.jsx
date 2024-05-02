@@ -1,7 +1,7 @@
 import React from "react";
 import "./TutorialScreen.scss";
 
-const TutorialScreen = ({ onTrialStart }) => {
+const TutorialScreen = ({ setStage }) => {
   return (
     <div className="tutorial-screen">
       <h1>Nasıl Oynanır?</h1>
@@ -29,7 +29,7 @@ const TutorialScreen = ({ onTrialStart }) => {
         </li>
       </ol>
       <p>Hazır olmanız için birkaç pratik tur ile başlayalım.</p>
-      <button onClick={onTrialStart}>Deneme Turlarına Başla</button>
+      <button onClick={() => setStage("offer")}>Deneme Turlarına Başla</button>
     </div>
   );
 };
