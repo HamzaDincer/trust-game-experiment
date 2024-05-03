@@ -30,6 +30,7 @@ const TrustGame = ({ participantNumber }) => {
     } else if (isTrial && round >= trialRoundCount) {
       setIsTrial(false);
       setMoneyBalance(20);
+      setRound(round + 1);
       setStage("begin");
     } else {
       setMoneyBalance(moneyBalance);
@@ -67,7 +68,6 @@ const TrustGame = ({ participantNumber }) => {
   // Function to handle start of actual game
   const handleGameStart = () => {
     setIsTrial(false); // End trial mode
-    setRound(1); // Reset round for actual game
     setStartTime(Date.now());
     setStage("offer"); // Start actual game rounds
   };
