@@ -15,10 +15,10 @@ const TrustGame = ({ participantNumber }) => {
   const [moneyBalance, setMoneyBalance] = useState(20);
   const [startTime, setStartTime] = useState(null);
   const [decisionTime, setDecisionTime] = useState(0);
-  const trialRoundCount = 1;
+  const trialRoundCount = 3;
   const experimentRoundCount = 10;
   const investmentReturnMultiplier = 2;
-  const investorResponse = [54, 57, 62, 68, 71, 75, 77, 82, 86, 93];
+  const investorResponse = [30, 70, 50, 54, 57, 62, 68, 71, 75, 77, 82, 86, 93];
 
   const navigate = useNavigate();
 
@@ -29,7 +29,6 @@ const TrustGame = ({ participantNumber }) => {
       setStage("offer");
     } else if (isTrial && round >= trialRoundCount) {
       setIsTrial(false);
-      setRound(1);
       setMoneyBalance(20);
       setStage("begin");
     } else {
@@ -40,7 +39,7 @@ const TrustGame = ({ participantNumber }) => {
       //
       const roundData = {
         participant_no: participantNumber,
-        round_number: round,
+        round_number: round - trialRoundCount,
         initial_amount: moneyBalance - investmentReturn + currentOffer,
         sent_amount: currentOffer,
         decision_time: decisionTime,

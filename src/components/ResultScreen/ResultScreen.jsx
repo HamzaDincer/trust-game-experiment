@@ -22,8 +22,12 @@ const ResultScreen = ({
         vermeye karar verdi.
       </p>
       <p className="investment-result">
-        {offer}TL olan yatırımınızdan{" "}
-        <strong>{investmentReturn - offer}TL</strong> kazandınız.
+        {offer}TL olan yatırımınızdan
+        <strong>
+          {investmentReturn - offer >= 0
+            ? ` ${investmentReturn - offer}TL kazandınız.`
+            : ` ${Math.abs(investmentReturn - offer)}TL kaybettiniz.`}
+        </strong>
       </p>
       <p className="balance-before">
         Yatırımdan önce <strong>{moneyBalance}TL</strong>'niz vardı.

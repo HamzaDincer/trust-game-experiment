@@ -31,14 +31,23 @@ const WaitingScreen = ({ offer, investmentReturnMultiplier, onContinue }) => {
 
   return (
     <div className="waiting-screen">
-      {phase > 0 && <p>Yatırım için {offer}TL koydunuz.</p>}
-      {phase > 1 && (
+      {phase > 0 && (
         <p>
-          Vekiliniz yatırımınızı {investmentReturnMultiplier} katına çıkardı.
+          Yatırım için <strong>{offer}TL</strong> koydunuz.
         </p>
       )}
-      {phase > 2 && <p>Artık yatırımınız {investmentWorth}TL değerinde.</p>}
-      {phase > 3 && <p>Yatırımcının kararını bekliyoruz{waitingDots}</p>}
+      {phase > 1 && (
+        <p>
+          Vekiliniz yatırımınızı <strong>{investmentReturnMultiplier} </strong>{" "}
+          katına çıkardı.
+        </p>
+      )}
+      {phase > 2 && (
+        <p>
+          Artık yatırımınız <strong>{investmentWorth}TL</strong> değerinde.
+        </p>
+      )}
+      {phase > 3 && <p>Vekilin kararını bekliyoruz{waitingDots}</p>}
     </div>
   );
 };
