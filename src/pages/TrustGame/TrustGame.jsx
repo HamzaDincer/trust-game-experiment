@@ -59,7 +59,7 @@ const TrustGame = ({ participantNumber }) => {
           console.error("Error sending data to backend:", error);
           // Handle data sending error
         });
-      if (round >= experimentRoundCount) {
+      if (round - 3 >= experimentRoundCount) {
         navigate("/ThankYou");
       }
     }
