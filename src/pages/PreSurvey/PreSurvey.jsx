@@ -49,7 +49,7 @@ const PreSurvey = ({ participantNumber }) => {
       <h1>Demografik Anket</h1>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>İsim: </label>
+          <label>İsim ve Soyisim: </label>
           <input
             type="text"
             name="name"
