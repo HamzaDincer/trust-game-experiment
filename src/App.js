@@ -7,7 +7,7 @@ import ThankYouPage from "./pages/ThankYou/ThankYou";
 import HomePage from "./pages/HomePage/HomePage";
 
 const Experiment = () => {
-  const [participantNumber, setParticipantNumber] = useState(1);
+  const [participantNumber, setParticipantNumber] = useState();
 
   const assignParticipantNumber = (number) => {
     setParticipantNumber(number);
